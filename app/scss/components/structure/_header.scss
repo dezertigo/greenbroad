@@ -1,7 +1,8 @@
 .header {
-   background-color: grey;
+   background-color: $light;
    position: fixed;
    width: 100%;
+   box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
    opacity: 1;
    transition: opacity 0.3s ease 0s;
    &:hover {
@@ -22,11 +23,14 @@
       @extend %container;
    }
    &__body {
-      min-height: 70px; // todo Указываем минимальную высоту шапки
+      min-height: 66px; // todo Указываем минимальную высоту шапки
       display: flex;
       align-items: center;
       justify-content: space-between; // todo Позиционируем элементы по оси Х
       column-gap: 20px;
+      @media (min-width:600px) {
+         min-height: 80px;
+      }
    }
    &__logo {
       z-index: 2;
@@ -36,20 +40,114 @@
          transform: scale(1.1);
       }
    }
+   &__btn {
+     font-weight: 700;
+     @include fl(18,27);
+     color: $light;
+     background: #3854DC;
+     border-radius: 8px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 20px 0;
+     @media (min-width: 600px) {
+      display: none;
+     }
+   }
+   &__controls {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+
+   }
+   &__controls-btn {
+      display: none;
+      @media (min-width: 600px) {
+         @include fl(14, 18);
+         color: #333;
+         padding: 13px 0;
+         width: 160px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         border: 1px solid #333;
+         border-radius: 8px;
+         cursor: pointer;
+         z-index: 2;
+         transition: all .5s ease;
+         &:hover {
+            color: #fff;
+            background-color: #3854DC;
+         }
+      }
+   }
+
 }
 
 .header-action {
-   flex: 1 1 auto; //Растягиваем на всю возможную ширину
-   max-width: 150px; // Задаем максимальную ширину (брать ширину меню из макета)
-   position: relative;
-   z-index: 2;
-   display: flex;
-   align-items: center;
-   justify-content: space-between; // Раздвигаем элементы меню между собой для резинового увеличения отступа
-   column-gap: 15px; // минимальный отступ между элементами меню
+   display: block;
+   margin-bottom: 48px;
+   @media (min-width: 993px) {
+      flex: 1 1 auto; //Растягиваем на всю возможную ширину
+      margin-bottom: 0;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between; // Раздвигаем элементы меню между собой для резинового увеличения отступа
+      column-gap: 15px; // минимальный отступ между элементами меню
+   }
+   &__body {
+      @extend %container;
+      position: fixed;
+      height: calc(100% - 66px);
+      top: 66px;
+      left: 0;
+      max-width: 100%;
+      width: 100%;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      background-color: #fff;
+      transition: all .5s ease;
+      transform: translateY(-200%);
+      &.active {
+         transform: translateY(0%);
+         overflow: auto;
+         box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+      }
+      @media (min-width: 600px) {
+         top: 80px;
+      }
+      @media (min-width: 993px) {
+         transform: translateY(0);
+         position: static;
+         max-width: 600px;
+         width: 100%;
+         padding-inline: 0 !important;
+      }
+      
+   }
+   // flex: 1 1 auto; //Растягиваем на всю возможную ширину
+   // max-width: 344px; // Задаем максимальную ширину (брать ширину меню из макета)
+   // position: relative;
+   // z-index: 2;
+   // display: flex;
+   // align-items: center;
+   // justify-content: space-between; // Раздвигаем элементы меню между собой для резинового увеличения отступа
+   // column-gap: 15px; // минимальный отступ между элементами меню
    li {
       cursor: pointer;
       transition: all 0.3s ease;
+      @include fl(24,38);
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+      margin-top: 48px;
+      padding-bottom: 0;
+      @media (min-width: 993px) {
+         @include fl(16,26);
+         margin-top: 0;
+         border-bottom: none;
+      }
       &:hover {
          @media (min-width: 769px) {
             a {
@@ -72,7 +170,7 @@
                left: 0;
                width: 0;
                height: 1px;
-               background: #000;
+               background: $dark;
                transition: all 0.3s ease;
             }
          }
@@ -83,10 +181,10 @@
 .burger {
    position: relative;
    z-index: 2;
-   min-height: 40px; // Высота блока для удобства нажатия на иконку
-   width: 40px; // Ширина блока для удобства нажатия на иконку
+   min-height: 30px; // Высота блока для удобства нажатия на иконку
+   width: 30px; // Ширина блока для удобства нажатия на иконку
    // ? Двигаем на половину от разницы между width для .burger и width для .burger__wrapper что бы .burger прилип к контейнеру
-   margin-left: -5px;
+   // margin-left: -9px;
    // ? Двигаем на половину от разницы между width для .burger и width для .burger__wrapper что бы .burger прилип к контейнеру
    display: flex;
    align-items: center;
@@ -96,7 +194,7 @@
    &:hover {
       transform: scale(1.2);
    }
-   @media (min-width: 769px) {
+   @media (min-width: 993px) {
       display: none;
    }
    // todo Если нужно изменить цвет бургера при наведении
@@ -110,8 +208,8 @@
    }
 	*/
    &__wrapper {
-      width: 30px; // todo Макетная ширина бургера
-      height: 20px; // todo Макетная высота бургера
+      width: 22px; // todo Макетная ширина бургера
+      height: 18px; // todo Макетная высота бургера
       position: relative;
       display: flex;
       flex-direction: column;

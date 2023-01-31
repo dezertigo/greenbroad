@@ -1,6 +1,7 @@
 const body = document.querySelector("body");
 const header = document.querySelector(".header");
 const burger = document.querySelector(".burger");
+const menu = document.querySelector(".header-action__body");
 // ! Burger
 
 body.addEventListener("click", burgerToggle);
@@ -19,12 +20,14 @@ function openBurger() {
    body.classList.add("lock");
    header.classList.add("active");
    burger.classList.add("active");
+   menu.classList.add("active");
    window.addEventListener("scroll", closeBurger);
 }
 function closeBurger() {
    body.classList.remove("lock");
    header.classList.remove("active");
    burger.classList.remove("active");
+   menu.classList.remove("active");
    window.removeEventListener("scroll", closeBurger);
 }
 

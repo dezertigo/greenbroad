@@ -118,39 +118,81 @@ input[type=submit],
 
 body.home .hero__container,
 .footer__container,
+.header-action__body,
 .header__container {
-  padding-left: 4.6875%;
-  padding-right: 4.6875%;
+  padding-left: 4.2553191489%;
+  padding-right: 4.2553191489%;
 }
 
 @font-face {
-  font-family: "Nunito";
+  font-family: "NotoSans";
   font-display: swap;
-  src: url("../fonts/Nunito-Regular.woff") format("woff"), url("../fonts/Nunito-Regular.woff-2") format("woff-2");
+  src: url("../fonts/NotoSans-Regular.woff") format("woff"), url("../fonts/NotoSans-Regular.woff-2") format("woff-2");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Nunito";
+  font-family: "NotoSans";
   font-display: swap;
-  src: url("../fonts/Nunito-Meidum.woff") format("woff"), url("../fonts/Nunito-Meidum.woff-2") format("woff-2");
+  src: url("../fonts/NotoSans-Medium.woff") format("woff"), url("../fonts/NotoSans-Medium.woff-2") format("woff-2");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Nunito";
+  font-family: "NotoSans";
   font-display: swap;
-  src: url("../fonts/Nunito-SemiBold.woff") format("woff"), url("../fonts/Nunito-SemiBold.woff-2") format("woff-2");
+  src: url("../fonts/NotoSans-SemiBold.woff") format("woff"), url("../fonts/NotoSans-SemiBold.woff-2") format("woff-2");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Nunito";
+  font-family: "NotoSans";
   font-display: swap;
-  src: url("../fonts/Nunito-Bold.woff") format("woff"), url("../fonts/Nunito-Bold.woff-2") format("woff-2");
+  src: url("../fonts/NotoSans-Bold.woff") format("woff"), url("../fonts/NotoSans-Bold.woff-2") format("woff-2");
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-display: swap;
+  src: url("../fonts/Poppins-Regular.woff") format("woff"), url("../fonts/Poppins-Regular.woff-2") format("woff-2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-display: swap;
+  src: url("../fonts/Poppins-Medium.woff") format("woff"), url("../fonts/Poppins-Medium.woff-2") format("woff-2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-display: swap;
+  src: url("../fonts/Poppins-SemiBold.woff") format("woff"), url("../fonts/Poppins-SemiBold.woff-2") format("woff-2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-display: swap;
+  src: url("../fonts/Poppins-Bold.woff") format("woff"), url("../fonts/Poppins-Bold.woff-2") format("woff-2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-display: swap;
+  src: url("../fonts/Poppins-ExtraBold.woff") format("woff"), url("../fonts/Poppins-ExtraBold.woff-2") format("woff-2");
+  font-weight: 800;
   font-style: normal;
 }
 
@@ -159,7 +201,7 @@ body.lock {
 }
 
 body {
-  font-family: "CustomFont";
+  font-family: "Poppins";
   font-size: 1rem;
   line-height: 1.25;
 }
@@ -177,9 +219,10 @@ main {
 }
 
 .header {
-  background-color: grey;
+  background-color: #fff;
   position: fixed;
   width: 100%;
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
   opacity: 1;
   transition: opacity 0.3s ease 0s;
 }
@@ -200,7 +243,7 @@ main {
 }
 
 .header__body {
-  min-height: 70px;
+  min-height: 66px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -219,21 +262,63 @@ main {
   transform: scale(1.1);
 }
 
-.header-action {
-  flex: 1 1 auto;
-  max-width: 150px;
-  position: relative;
-  z-index: 2;
+.header__btn {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: #fff;
+  background: #3854DC;
+  border-radius: 8px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  -moz-column-gap: 15px;
-  column-gap: 15px;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.header__controls {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.header__controls-btn {
+  display: none;
+}
+
+.header-action {
+  display: block;
+  margin-bottom: 48px;
+}
+
+.header-action__body {
+  position: fixed;
+  height: calc(100% - 66px);
+  top: 66px;
+  left: 0;
+  max-width: 100%;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #fff;
+  transition: all 0.5s ease;
+  transform: translateY(-200%);
+}
+
+.header-action__body.active {
+  transform: translateY(0%);
+  overflow: auto;
+  box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
 }
 
 .header-action li {
   cursor: pointer;
   transition: all 0.3s ease;
+  font-size: 1.5rem;
+  line-height: 1.5833333333;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.1);
+  margin-top: 48px;
+  padding-bottom: 0;
 }
 
 .header-action li a {
@@ -244,9 +329,8 @@ main {
 .burger {
   position: relative;
   z-index: 2;
-  min-height: 40px;
-  width: 40px;
-  margin-left: -5px;
+  min-height: 30px;
+  width: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -268,8 +352,8 @@ main {
 }
 
 .burger__wrapper {
-  width: 30px;
-  height: 20px;
+  width: 22px;
+  height: 18px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -669,12 +753,48 @@ body.home .hero__container {
   padding-top: 30px;
 }
 
+@media (min-width: 600px) {
+  .header__body {
+    min-height: 80px;
+  }
+
+  .header__btn {
+    display: none;
+  }
+
+  .header__controls-btn {
+    font-size: 0.875rem;
+    line-height: 1.2857142857;
+    color: #333;
+    padding: 13px 0;
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #333;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.5s ease;
+  }
+
+  .header__controls-btn:hover {
+    color: #fff;
+    background-color: #3854DC;
+  }
+
+  .header-action__body {
+    top: 80px;
+  }
+}
+
 @media (min-width: 769px) {
   body.home .hero__container,
   .footer__container,
+  .header-action__body,
   .header__container {
-    padding-left: 2.5%;
-    padding-right: 2.5%;
+    padding-left: 2.6007802341%;
+    padding-right: 2.6007802341%;
   }
 
   .header-action li:hover a:after {
@@ -693,8 +813,37 @@ body.home .hero__container {
     left: 0;
     width: 0;
     height: 1px;
-    background: #000;
+    background: #333;
     transition: all 0.3s ease;
+  }
+}
+
+@media (min-width: 993px) {
+  .header-action {
+    flex: 1 1 auto;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    -moz-column-gap: 15px;
+    column-gap: 15px;
+  }
+
+  .header-action__body {
+    transform: translateY(0);
+    position: static;
+    max-width: 600px;
+    width: 100%;
+    padding-inline: 0 !important;
+  }
+
+  .header-action li {
+    font-size: 1rem;
+    line-height: 1.625;
+    margin-top: 0;
+    border-bottom: none;
   }
 
   .burger {
@@ -705,8 +854,19 @@ body.home .hero__container {
 @media (min-width: 1200px) {
   body.home .hero__container,
   .footer__container,
+  .header-action__body,
   .header__container {
-    padding-left: 3.4722222222%;
-    padding-right: 3.4722222222%;
+    padding-left: 2.4193548387%;
+    padding-right: 2.4193548387%;
+  }
+}
+
+@media (min-width: 1500px) {
+  body.home .hero__container,
+  .footer__container,
+  .header-action__body,
+  .header__container {
+    padding-left: 2.0833333333%;
+    padding-right: 2.0833333333%;
   }
 }

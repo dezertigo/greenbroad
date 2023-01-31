@@ -1,5 +1,11 @@
 // Подключение локальных шрифтов
-@include ff("Nunito", "Regular");
-@include ff("Nunito", "Meidum");
-@include ff("Nunito", "SemiBold");
-@include ff("Nunito", "Bold");
+@include ff("NotoSans", "Regular");
+@include ff("NotoSans", "Medium");
+@include ff("NotoSans", "SemiBold");
+@include ff("NotoSans", "Bold");
+@include ff("Poppins", "Regular");
+@include ff("Poppins", "Medium");
+@include ff("Poppins", "SemiBold");
+@include ff("Poppins", "Bold");
+@include ff("Poppins", "ExtraBold");
+
