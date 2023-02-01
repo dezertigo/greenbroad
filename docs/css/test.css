@@ -309,6 +309,10 @@ main {
   padding: 20px 0;
 }
 
+.header__btn:hover {
+  background-color: #4d6aff;
+}
+
 .header__controls {
   display: flex;
   align-items: center;
@@ -868,7 +872,7 @@ body.test .hero__container {
   .header-action__body {
     transform: translateY(0);
     position: static;
-    max-width: 600px;
+    max-width: 450px;
     width: 100%;
     padding-inline: 0 !important;
   }
@@ -892,6 +896,10 @@ body.test .hero__container {
   .header__container {
     padding-left: 2.4193548387%;
     padding-right: 2.4193548387%;
+  }
+
+  .header-action__body {
+    max-width: 600px;
   }
 }
 

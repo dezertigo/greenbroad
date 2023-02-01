@@ -50,12 +50,15 @@
       @extend %btn;
       @include fl(18,27);
       font-weight: 700;
-     color: $light;
-     background: $blue;
-     padding: 20px 0;
-     @media (min-width: 600px) {
-      display: none;
-     }
+      color: $light;
+      background: $blue;
+      padding: 20px 0;
+      &:hover {
+         background-color: #4d6aff;
+      }
+      @media (min-width: 600px) {
+         display: none;
+      }
    }
    &__controls {
       display: flex;
@@ -121,9 +124,12 @@
       @media (min-width: 993px) {
          transform: translateY(0);
          position: static;
-         max-width: 600px;
+         max-width: 450px;
          width: 100%;
          padding-inline: 0 !important;
+      }
+      @media (min-width: 1200px) {
+         max-width: 600px;
       }
       
    }

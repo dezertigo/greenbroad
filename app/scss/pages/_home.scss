@@ -2,17 +2,42 @@ body.home {
    .hero {
       &__container {
          padding-top: 14px;
-         padding-bottom: 80px;
+         padding-bottom: 40px;
          @extend %container;
+         @media (min-width: 600px) {
+            padding-top: 20px;
+            padding-bottom: 60px;
+         }
+         @media (min-width: 993px) {
+            padding-top: 30px;
+            padding-bottom: 70px;
+         }
+         @media (min-width: 1300px) {
+            padding-top: 45px;
+         }
+         @media (min-width: 1600px) {
+            padding-top: 60px;
+         }
       }
       &__inner {
         display: flex;
         flex-direction: column-reverse;
         gap: 20px;
-         
+        position: relative; 
+        @media (min-width:993px) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: percent(72, 1840);
+            padding-right: percent(72, 1840);
+         }
       }
       &__content {
-
+         max-width: 634px;
+         width: 100%;
+         @media (min-width: 993px) {
+            max-width: 688px;
+         }
       }
       &__title {
         @include fl(38,44);
@@ -31,13 +56,29 @@ body.home {
          }
          @media (min-width: 600px) {
             @include fl(58,67);
-            max-width: 688px;
-            width: 100%;
+            margin-bottom: 20px;
+         }
+         @media (min-width: 993px) {
+            @include fl(38,44);
+            margin-bottom: 24px;
+         }
+         @media (min-width: 1200px) {
+            @include fl(58, 67);
+         }
+         @media (min-width: 1600px) {
+            @include fl(68,78);
          }
       }
       &__text {
          @include fl(15,24);
          margin-bottom: 24px;
+         @media (min-width: 600px) {
+            @include fl(16,26);
+            margin-bottom: 32px;
+         }
+         @media (min-width: 993px) {
+            margin-bottom: 40px;
+         }
       }
       &__btn {
          @extend %btn;
@@ -48,6 +89,9 @@ body.home {
          padding: 22px 0;
          max-width: 240px;
          width: 100%;
+         &:hover {
+            background-color: #4d6aff;
+         }
       }
       &__pic {
          transform: scaleX(-1);
@@ -55,6 +99,10 @@ body.home {
          padding-bottom: percent(326, 344);
          @media (min-width: 500px) {
             padding-bottom: percent(480, 729);
+         }
+         @media(min-width: 993px) {
+            padding-bottom: percent(832, 1696);
+            max-width: 832px;
          }
       }
    }
