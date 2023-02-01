@@ -1,8 +1,61 @@
 body.home {
    .hero {
       &__container {
-         padding-top: 30px;
+         padding-top: 14px;
+         padding-bottom: 80px;
          @extend %container;
+      }
+      &__inner {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 20px;
+         
+      }
+      &__content {
+
+      }
+      &__title {
+        @include fl(38,44);
+        font-weight: 800;
+        margin-bottom: 12px;
+        .small-br {
+            display: block;
+         }
+         @media (min-width: 470px) {
+            .small-br {
+               display: unset;
+            }
+            .medium-br {
+               display: block;
+            }
+         }
+         @media (min-width: 600px) {
+            @include fl(58,67);
+            max-width: 688px;
+            width: 100%;
+         }
+      }
+      &__text {
+         @include fl(15,24);
+         margin-bottom: 24px;
+      }
+      &__btn {
+         @extend %btn;
+         @include fl(18,27);
+         font-weight: 700;
+         background-color: $blue;
+         color: $light;
+         padding: 22px 0;
+         max-width: 240px;
+         width: 100%;
+      }
+      &__pic {
+         transform: scaleX(-1);
+         border-radius: 24px;
+         padding-bottom: percent(326, 344);
+         @media (min-width: 500px) {
+            padding-bottom: percent(480, 729);
+         }
       }
    }
 }

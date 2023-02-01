@@ -36,19 +36,22 @@
       z-index: 2;
       @include fl(30);
       transition: all 0.3s ease;
+      img {
+         max-width: 168px;
+         @media (min-width:600px) {
+            max-width: unset;
+         }
+      }
       &:hover {
          transform: scale(1.1);
       }
    }
    &__btn {
-     font-weight: 700;
-     @include fl(18,27);
+      @extend %btn;
+      @include fl(18,27);
+      font-weight: 700;
      color: $light;
-     background: #3854DC;
-     border-radius: 8px;
-     display: flex;
-     align-items: center;
-     justify-content: center;
+     background: $blue;
      padding: 20px 0;
      @media (min-width: 600px) {
       display: none;
@@ -61,23 +64,19 @@
 
    }
    &__controls-btn {
+      @extend %btn;
       display: none;
       @media (min-width: 600px) {
+         display: flex;
          @include fl(14, 18);
          color: #333;
          padding: 13px 0;
          width: 160px;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         border: 1px solid #333;
-         border-radius: 8px;
-         cursor: pointer;
+         border: 1px solid $dark;
          z-index: 2;
-         transition: all .5s ease;
          &:hover {
             color: #fff;
-            background-color: #3854DC;
+            background-color: $blue;
          }
       }
    }
@@ -107,9 +106,10 @@
       width: 100%;
       padding-top: 12px;
       padding-bottom: 12px;
-      background-color: #fff;
+      background-color: $light;
       transition: all .5s ease;
       transform: translateY(-200%);
+      z-index: 2;
       &.active {
          transform: translateY(0%);
          overflow: auto;
