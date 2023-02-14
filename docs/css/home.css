@@ -116,6 +116,7 @@ input[type=submit],
   border-radius: 0;
 }
 
+body.home .marriage__container,
 body.home .work__container,
 body.home .hero__container,
 .footer__container,
@@ -135,6 +136,20 @@ body.home .hero__btn,
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.5s ease;
+}
+
+body.home .marriage__title,
+body.home .work__title {
+  font-size: 1.75rem;
+  line-height: 1.2142857143;
+  font-weight: 800;
+}
+
+body.home .marriage__text,
+body.home .work__text {
+  color: #615F67;
+  font-size: 0.9375rem;
+  line-height: 1.6;
 }
 
 @font-face {
@@ -872,11 +887,8 @@ body.home .work__inner {
 }
 
 body.home .work__title {
-  font-size: 1.75rem;
-  line-height: 1.2142857143;
   margin-bottom: 16px;
   text-align: center;
-  font-weight: 800;
 }
 
 body.home .work__title span {
@@ -884,9 +896,6 @@ body.home .work__title span {
 }
 
 body.home .work__text {
-  color: #615F67;
-  font-size: 0.9375rem;
-  line-height: 1.6;
   text-align: center;
   margin-bottom: 28px;
 }
@@ -935,7 +944,44 @@ body.home .work__btn:hover {
 
 body.home .marriage {
   background-color: #fff;
-  padding: 20px;
+  margin-top: 16px;
+}
+
+body.home .marriage__container {
+  background: #FFF6E9;
+  border-radius: 32px;
+}
+
+body.home .marriage__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 36px 0;
+}
+
+body.home .marriage__pics {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+body.home .marriage__pic {
+  border-radius: 16px;
+  border: 4px solid #FFFFFF;
+  padding-bottom: 69.768419283%;
+}
+
+body.home .marriage__pic:nth-child(2) img {
+  -o-object-position: right;
+  object-position: right;
+}
+
+body.home .marriage__pic:nth-child(3) {
+  display: none;
+}
+
+body.home .marriage__title {
+  margin-bottom: 16px;
 }
 
 @media (min-width: 470px) {
@@ -1012,9 +1058,21 @@ body.home .marriage {
   body.home .work__inner {
     padding: 36px;
   }
+
+  body.home .marriage__container {
+    background: unset;
+    border-radius: unset;
+  }
+
+  body.home .marriage__inner {
+    padding: 36px;
+    background: #FFF6E9;
+    border-radius: 32px;
+  }
 }
 
 @media (min-width: 769px) {
+  body.home .marriage__container,
   body.home .work__container,
   body.home .hero__container,
   .footer__container,
@@ -1022,6 +1080,19 @@ body.home .marriage {
   .header__container {
     padding-left: 2.6007802341%;
     padding-right: 2.6007802341%;
+  }
+
+  body.home .marriage__title,
+  body.home .work__title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  body.home .marriage__text,
+  body.home .work__text {
+    font-size: 1rem;
+    line-height: 1.625;
+    width: 100%;
   }
 
   .header-action li:hover a:after {
@@ -1048,16 +1119,8 @@ body.home .marriage {
     padding: 48px;
   }
 
-  body.home .work__title {
-    font-size: 2.5rem;
-    line-height: 1.2;
-  }
-
   body.home .work__text {
-    font-size: 1rem;
-    line-height: 1.625;
     max-width: 832px;
-    width: 100%;
     margin: 0 auto 28px;
   }
 
@@ -1082,6 +1145,24 @@ body.home .marriage {
 
   body.home .work__btn {
     margin-top: 40px;
+  }
+
+  body.home .marriage__inner {
+    padding: 48px;
+    gap: 40px;
+  }
+
+  body.home .marriage__pics {
+    gap: 16px;
+  }
+
+  body.home .marriage__pic {
+    border-width: 6px;
+    padding-bottom: 58.1362426622%;
+  }
+
+  body.home .marriage__title {
+    margin-bottom: 20px;
   }
 }
 
@@ -1161,9 +1242,28 @@ body.home .marriage {
   body.home .work__btn {
     margin-top: 60px;
   }
+
+  body.home .marriage__inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  body.home .marriage__pics {
+    flex: 1 0 50%;
+  }
+
+  body.home .marriage__pic {
+    max-width: 264px;
+  }
+
+  body.home .marriage__content {
+    max-width: 688px;
+    width: 100%;
+  }
 }
 
 @media (min-width: 1200px) {
+  body.home .marriage__container,
   body.home .work__container,
   body.home .hero__container,
   .footer__container,
@@ -1206,13 +1306,25 @@ body.home .marriage {
 }
 
 @media (min-width: 1400px) {
+  body.home .marriage__title,
   body.home .work__title {
     font-size: 3rem;
     line-height: 1.2083333333;
   }
 }
 
+@media (min-width: 1440px) {
+  body.home .marriage__pic {
+    padding-bottom: 35.9506495629%;
+  }
+
+  body.home .marriage__pic:nth-child(3) {
+    display: block;
+  }
+}
+
 @media (min-width: 1500px) {
+  body.home .marriage__container,
   body.home .work__container,
   body.home .hero__container,
   .footer__container,
@@ -1234,6 +1346,10 @@ body.home .marriage {
   }
 
   body.home .work__inner {
+    padding: 72px;
+  }
+
+  body.home .marriage__inner {
     padding: 72px;
   }
 }

@@ -24,4 +24,24 @@
    transition: all .5s ease;
 }
 
+%sec-title {
+   @include fl(28,34);
+   font-weight: 800;
+   @media (min-width: 769px) {
+      @include fl(40,48);
+   }
+   @media (min-width: 1400px) {
+      @include fl(48, 58);
+   }
+}
+
+%sec-text {
+   color: $gray;
+   @include fl(15,24);
+   @media(min-width: 769px) {
+      @include fl(16,26);
+      width: 100%;
+   }
+}
+
 
