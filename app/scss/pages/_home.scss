@@ -1,5 +1,7 @@
 body.home {
+   background-color: $light;
    .hero {
+      background-color: $bg;
       &__container {
          padding-top: 14px;
          padding-bottom: 40px;
@@ -105,5 +107,136 @@ body.home {
             max-width: 832px;
          }
       }
+   }
+   .work {
+      background-color: $bg;
+      border-bottom-left-radius: 32px;
+      border-bottom-right-radius: 32px;
+      &__container {
+         @extend %container;
+         padding-top: 40px;
+         padding-bottom: 16px;
+         @media (min-width: 600px) {
+            padding-top: 60px;
+            padding-bottom: 20px;
+         }
+         @media (min-width: 993px) {
+            padding-top: 70px;
+            padding-bottom: 30px;
+         }
+         @media (min-width: 1250px) {
+            padding-bottom: 40px;
+         }
+      }
+      &__inner {
+         padding: 36px 16px;
+         border-radius: 32px;
+         background-color: #fff;
+         @media (min-width: 600px) {
+            padding: 36px;
+         }
+         @media (min-width: 769px) {
+            padding: 48px;
+         }
+         @media (min-width: 1600px) {
+            padding: 72px;
+         }
+      }
+      &__title {
+         @include fl(28, 34);
+         margin-bottom: 16px;
+         text-align: center;
+         font-weight: 800;
+         span {
+            display: block;
+         }
+         @media (min-width: 769px) {
+            @include fl(40,48);
+         }
+         @media (min-width: 1400px) {
+            @include fl(48, 58);
+         }
+      }
+      &__text {
+         color: $gray;
+         @include fl(15,24);
+         text-align: center;
+         margin-bottom: 28px;
+         @media (min-width: 769px) {
+            @include fl(16,26);
+            max-width: 832px;
+            width: 100%;
+            margin: 0 auto 28px;
+         }
+      }
+      &__list {
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+         @media (min-width: 769px) {
+            gap: 24px;
+         }
+         @media (min-width: 993px) {
+            gap: 32px;
+         }
+         @media (min-width: 1250px) {
+            flex-direction: row;
+            justify-content: center;
+         }
+      }
+      &__item {
+         padding: 24px;
+         display: flex;
+         gap: 20px;
+         background: rgba(255, 255, 255, 0.5);
+         box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
+         border-radius: 16px;
+         @media (min-width: 769px) {
+            padding: 32px;
+            gap: 40px;
+         }
+         @media (min-width: 1250px) {
+            max-width: 544px;
+            width: 100%;
+         }
+      }
+      &__desc-title {
+         @include fl(18,29);
+         font-weight: 700;
+         margin-bottom: 8px;
+         @media (min-width: 769px) {
+            @include fl(20,32);
+         }
+      }
+      &__desc-text {
+         @include fl(14, 22);
+         @media (min-width: 769px) {
+            @include fl(15,24);
+         }
+      }
+      &__btn {
+         @extend %btn;
+         margin: 28px auto 0;
+         padding: 18px 0;
+         max-width: 220px;
+         width: 100%;
+         border: 1px solid #333333;
+         border-radius: 8px;
+         font-weight: 500;
+         &:hover {
+            background-color: $blue;
+            color: $light;
+         }
+         @media (min-width: 769px) {
+            margin-top: 40px;
+         }
+         @media (min-width: 993px) {
+            margin-top: 60px;
+         }
+      }
+   }
+   .marriage {
+      background-color: #fff;
+      padding: 20px;
    }
 }
