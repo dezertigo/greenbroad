@@ -116,6 +116,10 @@ input[type=submit],
   border-radius: 0;
 }
 
+body.home .reviews__container,
+body.home .invest__container,
+body.home .pref__container,
+body.home .plans__container,
 body.home .get__container,
 body.home .choose__container,
 body.home .marriage__container,
@@ -128,6 +132,7 @@ body.home .hero__container,
   padding-right: 4.2553191489%;
 }
 
+body.home .card__btn,
 body.home .get__btn,
 body.home .work__btn,
 body.home .hero__btn,
@@ -141,6 +146,10 @@ body.home .hero__btn,
   transition: all 0.5s ease;
 }
 
+body.home .reviews__title,
+body.home .invest__title,
+body.home .pref__title,
+body.home .plans__title,
 body.home .get__title,
 body.home .choose__title,
 body.home .marriage__title,
@@ -150,6 +159,9 @@ body.home .work__title {
   font-weight: 800;
 }
 
+body.home .invest__text,
+body.home .pref__text,
+body.home .plans__text,
 body.home .get__text,
 body.home .choose__text,
 body.home .marriage__text,
@@ -1083,6 +1095,14 @@ body.home .get__item {
   border: 4px solid #fff;
 }
 
+body.home .get__item img {
+  transition: all 0.5s ease;
+}
+
+body.home .get__item img:hover {
+  transform: scale(1.1);
+}
+
 body.home .get__item:nth-child(even) {
   transform: translateY(40px);
 }
@@ -1118,6 +1138,292 @@ body.home .get__btn {
 body.home .get__btn:hover {
   color: #FFF6E9;
   background-color: #333;
+}
+
+body.home .plans {
+  margin-top: 20px;
+  background-color: #f8f6f9;
+  border-top-right-radius: 32px;
+  border-top-left-radius: 32px;
+}
+
+body.home .plans__container {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+body.home .plans__inner {
+  padding: 36px 16px;
+  border-radius: 32px;
+  background-color: #fff;
+}
+
+body.home .plans__title {
+  font-size: 1.875rem;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+body.home .plans__title span {
+  display: block;
+}
+
+body.home .plans__text {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+body.home .plans__cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+body.home .card {
+  max-width: 400px;
+  width: 100%;
+  padding: 2px;
+  background: rgba(51, 51, 51, 0.1);
+  border-radius: 20px;
+  position: relative;
+  transition: all 1s ease;
+}
+
+body.home .card:hover {
+  background: linear-gradient(135deg, #bcc4ec 0%, #8de6b1 44%, #3854dc 100%);
+}
+
+body.home .card:hover .card__lvl span {
+  color: #3854DC;
+  background-color: rgba(56, 84, 220, 0.1);
+}
+
+body.home .card__content {
+  background-color: #fff;
+  padding: 30px 18px;
+  border-radius: 18px;
+}
+
+body.home .card__title {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+body.home .card__subtitle {
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.5714285714;
+  text-align: center;
+  color: #615F67;
+}
+
+body.home .card__price {
+  font-size: 3rem;
+  line-height: 1.5;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -0.05em;
+  margin-bottom: 12px;
+}
+
+body.home .card__lvl {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+body.home .card__lvl span {
+  font-size: 0.8125rem;
+  line-height: 1.6153846154;
+  background: rgba(97, 95, 103, 0.1);
+  border-radius: 100px;
+  padding: 7px 16px;
+  color: #615F67;
+  font-weight: 500;
+}
+
+body.home .card__text {
+  font-size: 0.875rem;
+  line-height: 1.5714285714;
+  color: #615F67;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+body.home .card__btn {
+  max-width: 220px;
+  width: 100%;
+  border-radius: 100px;
+  padding: 15px 0;
+  border: 1px solid #333;
+  margin: 0 auto 36px;
+  font-size: 0.9375rem;
+  line-height: 1.4666666667;
+  font-weight: 700;
+  color: #fff;
+  background-color: #333;
+}
+
+body.home .card__btn:hover {
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #333;
+}
+
+body.home .card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+body.home .card__item {
+  position: relative;
+  padding: 1.5px 0 1.5px 36px;
+}
+
+body.home .card__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 24px;
+  height: 24px;
+  background-image: url(../../img/icons/check.svg);
+}
+
+body.home .pref {
+  background-color: #f8f6f9;
+  border-bottom-right-radius: 32px;
+  border-bottom-left-radius: 32px;
+}
+
+body.home .pref__container {
+  padding-top: 4px;
+  padding-bottom: 16px;
+}
+
+body.home .pref__inner {
+  padding: 36px 16px;
+  border-radius: 32px;
+  background-color: #fff;
+}
+
+body.home .pref__title {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+body.home .pref__title span {
+  display: block;
+}
+
+body.home .pref__text {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+body.home .pref__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+body.home .pref__item {
+  border: 1px solid rgba(51, 51, 51, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+body.home .pref__item svg {
+  margin-bottom: 28px;
+}
+
+body.home .pref__item-title {
+  font-size: 1.125rem;
+  line-height: 1.6111111111;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+body.home .pref__item-text {
+  font-size: 0.875rem;
+  line-height: 1.5714285714;
+  color: #615F67;
+}
+
+body.home .invest {
+  margin-top: 16px;
+}
+
+body.home .invest__container {
+  background: #EBEEFB;
+  border-radius: 32px;
+}
+
+body.home .invest__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 36px 0;
+}
+
+body.home .invest__pic {
+  border-radius: 24px;
+  transform: rotateY(180deg);
+  padding-bottom: 69.476744186%;
+}
+
+body.home .invest__pic img {
+  transform: scale(1.2);
+  -o-object-position: -90%;
+  object-position: -90%;
+}
+
+body.home .invest__title {
+  font-size: 2.375rem;
+  line-height: 1.1578947368;
+  margin-bottom: 16px;
+}
+
+body.home .invest__text {
+  margin-bottom: 24px;
+}
+
+body.home .reviews {
+  margin-top: 20px;
+  background-color: #f8f6f9;
+  border-top-right-radius: 32px;
+  border-top-left-radius: 32px;
+}
+
+body.home .reviews__container {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+body.home .reviews__inner {
+  padding: 36px 16px;
+  border-radius: 32px;
+  background-color: #fff;
+}
+
+body.home .reviews__title {
+  font-size: 1.875rem;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+body.home .reviews__title span {
+  display: block;
 }
 
 @media (min-width: 470px) {
@@ -1245,6 +1551,62 @@ body.home .get__btn:hover {
     background: #FFF6E9;
     border-radius: 32px;
   }
+
+  body.home .plans__container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  body.home .plans__inner {
+    padding: 36px;
+  }
+
+  body.home .pref__container {
+    padding-top: 0px;
+    padding-bottom: 20px;
+  }
+
+  body.home .pref__inner {
+    padding: 36px;
+  }
+
+  body.home .pref__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  body.home .pref__item {
+    flex: 1 0 48%;
+    padding: 24px;
+  }
+
+  body.home .invest__container {
+    background: unset;
+    border-radius: unset;
+  }
+
+  body.home .invest__inner {
+    padding: 32px;
+    background: #EBEEFB;
+    border-radius: 32px;
+  }
+
+  body.home .reviews__container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  body.home .reviews__inner {
+    padding: 36px;
+  }
+}
+
+@media (min-width: 700px) {
+  body.home .plans__cards {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1268,6 +1630,10 @@ body.home .get__btn:hover {
 }
 
 @media (min-width: 769px) {
+  body.home .reviews__container,
+  body.home .invest__container,
+  body.home .pref__container,
+  body.home .plans__container,
   body.home .get__container,
   body.home .choose__container,
   body.home .marriage__container,
@@ -1280,6 +1646,10 @@ body.home .get__btn:hover {
     padding-right: 2.6007802341%;
   }
 
+  body.home .reviews__title,
+  body.home .invest__title,
+  body.home .pref__title,
+  body.home .plans__title,
   body.home .get__title,
   body.home .choose__title,
   body.home .marriage__title,
@@ -1288,6 +1658,9 @@ body.home .get__btn:hover {
     line-height: 1.2;
   }
 
+  body.home .invest__text,
+  body.home .pref__text,
+  body.home .plans__text,
   body.home .get__text,
   body.home .choose__text,
   body.home .marriage__text,
@@ -1410,6 +1783,47 @@ body.home .get__btn:hover {
     max-width: 500px;
     width: 100%;
     margin: 0 auto 20px;
+  }
+
+  body.home .plans__inner {
+    padding: 48px;
+  }
+
+  body.home .plans__text {
+    max-width: 832px;
+    margin: 0 auto 40px;
+  }
+
+  body.home .pref__inner {
+    padding: 48px;
+  }
+
+  body.home .pref__text {
+    max-width: 832px;
+    margin: 0 auto 40px;
+  }
+
+  body.home .invest {
+    margin-top: 20px;
+  }
+
+  body.home .invest__inner {
+    padding: 48px;
+    gap: 40px;
+  }
+
+  body.home .invest__title {
+    margin-bottom: 20px;
+    font-size: 3.25rem;
+    line-height: 1.1538461538;
+  }
+
+  body.home .invest__text {
+    margin-bottom: 32px;
+  }
+
+  body.home .reviews__inner {
+    padding: 48px;
   }
 }
 
@@ -1554,9 +1968,70 @@ body.home .get__btn:hover {
     gap: 20px;
     padding: 40px 0 100px;
   }
+
+  body.home .plans__container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  body.home .plans__text {
+    margin-top: 60px;
+  }
+
+  body.home .plans__cards {
+    justify-content: center;
+    gap: 32px;
+  }
+
+  body.home .pref__container {
+    padding-top: 0px;
+    padding-bottom: 30px;
+  }
+
+  body.home .pref__text {
+    margin-top: 60px;
+  }
+
+  body.home .pref__list {
+    gap: 32px;
+  }
+
+  body.home .invest__inner {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  body.home .invest__pic {
+    max-width: 832px;
+    padding-bottom: 34.1981132075%;
+  }
+
+  body.home .invest__pic img {
+    -o-object-position: 0%;
+    object-position: 0%;
+  }
+
+  body.home .invest__content {
+    max-width: 688px;
+    width: 100%;
+  }
+
+  body.home .reviews {
+    margin-top: 40px;
+  }
+
+  body.home .reviews__container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 
 @media (min-width: 1200px) {
+  body.home .reviews__container,
+  body.home .invest__container,
+  body.home .pref__container,
+  body.home .plans__container,
   body.home .get__container,
   body.home .choose__container,
   body.home .marriage__container,
@@ -1587,6 +2062,10 @@ body.home .get__btn:hover {
   }
 
   body.home .get {
+    margin-top: 30px;
+  }
+
+  body.home .invest {
     margin-top: 30px;
   }
 }
@@ -1637,6 +2116,26 @@ body.home .get__btn:hover {
   body.home .get__item:nth-child(4) {
     transform: translateY(0px);
   }
+
+  body.home .plans__container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  body.home .pref__container {
+    padding-top: 0px;
+    padding-bottom: 40px;
+  }
+
+  body.home .pref__item {
+    flex: 1 0 31%;
+    padding: 32px;
+  }
+
+  body.home .reviews__container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 @media (min-width: 1300px) {
@@ -1646,6 +2145,10 @@ body.home .get__btn:hover {
 }
 
 @media (min-width: 1400px) {
+  body.home .reviews__title,
+  body.home .invest__title,
+  body.home .pref__title,
+  body.home .plans__title,
   body.home .get__title,
   body.home .choose__title,
   body.home .marriage__title,
@@ -1660,6 +2163,15 @@ body.home .get__btn:hover {
 
   body.home .get__text {
     max-width: 880px;
+  }
+
+  body.home .invest__title {
+    font-size: 3.875rem;
+    line-height: 1.1451612903;
+  }
+
+  body.home .invest__title span {
+    display: block;
   }
 }
 
@@ -1682,6 +2194,10 @@ body.home .get__btn:hover {
 }
 
 @media (min-width: 1500px) {
+  body.home .reviews__container,
+  body.home .invest__container,
+  body.home .pref__container,
+  body.home .plans__container,
   body.home .get__container,
   body.home .choose__container,
   body.home .marriage__container,
@@ -1705,6 +2221,10 @@ body.home .get__btn:hover {
   body.home .get {
     margin-top: 40px;
   }
+
+  body.home .invest {
+    margin-top: 40px;
+  }
 }
 
 @media (min-width: 1600px) {
@@ -1726,6 +2246,22 @@ body.home .get__btn:hover {
   }
 
   body.home .choose__inner {
+    padding: 72px;
+  }
+
+  body.home .plans__inner {
+    padding: 72px;
+  }
+
+  body.home .pref__inner {
+    padding: 72px;
+  }
+
+  body.home .invest__inner {
+    padding: 72px;
+  }
+
+  body.home .reviews__inner {
     padding: 72px;
   }
 }

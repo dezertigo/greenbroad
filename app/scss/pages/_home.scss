@@ -434,7 +434,6 @@ body.home {
          }
       }
    }
-
    .get {
       background-color: #fff;
       margin-top: 16px;
@@ -520,6 +519,12 @@ body.home {
          flex: 1 0 48%;
          padding-bottom: percent(158, 344);
          border: 4px solid $light;
+         img {
+            transition: all .5s ease;
+            &:hover {
+               transform: scale(1.1);
+            }
+         }
          &:nth-child(even) {
             transform: translateY(40px);
          }
@@ -629,6 +634,408 @@ body.home {
          &:hover {
             color: #FFF6E9;
             background-color: $dark;
+         }
+      }
+   }
+   .plans {
+      margin-top: 20px;
+      background-color: $bg;
+      border-top-right-radius: 32px;
+      border-top-left-radius: 32px;
+      &__container {
+         @extend %container;
+         padding-top: 16px;
+         padding-bottom: 16px;
+         @media (min-width: 600px) {
+            padding-top: 20px;
+            padding-bottom: 20px;
+         }
+         @media (min-width: 993px) {
+            padding-top: 30px;
+            padding-bottom: 30px;
+         }
+         @media (min-width: 1250px) {
+            padding-top: 40px;
+            padding-bottom: 40px;
+         }
+      }
+      &__inner {
+         padding: 36px 16px;
+         border-radius: 32px;
+         background-color: #fff;
+         @media (min-width: 600px) {
+            padding: 36px;
+         }
+         @media (min-width: 769px) {
+            padding: 48px;
+         }
+         @media (min-width: 1600px) {
+            padding: 72px;
+         }
+      }
+      &__title {
+        @extend %sec-title;
+        @include fl(30,36);
+         margin-bottom: 16px;
+         text-align: center;
+         span {
+            display: block;
+         }
+      }
+      &__text {
+        @extend %sec-text;
+         text-align: center;
+         margin-bottom: 28px;
+         @media (min-width: 769px) {
+            max-width: 832px;
+            margin: 0 auto 40px;
+         }
+         @media (min-width:993px) {
+            margin-top: 60px;
+         }
+      }
+      &__cards {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         align-items: center;
+         gap: 16px;
+         @media (min-width: 700px) {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 24px;
+         }
+         @media (min-width: 993px) {
+            justify-content: center;
+            gap: 32px;
+         }
+      }
+   }
+   .card {
+      max-width: 400px;
+      width: 100%;
+      padding: 2px;
+      background: rgba(51, 51, 51, 0.1);
+      border-radius: 20px;
+      position: relative;
+      transition: all 1s ease;
+      &:hover {
+         background: linear-gradient(135deg, #bcc4ec 0%, #8de6b1 44%, #3854dc 100%);
+         .card__lvl {
+            span {
+               color: $blue;
+               background-color: rgba(56, 84, 220, 0.1);
+            }
+         }
+      }
+      &__content {
+         background-color: $light;
+         padding: 30px 18px;
+         border-radius: 18px;
+      }
+      &__title {
+         font-weight: 500;
+         @include fl(24,36);
+         text-align: center;
+         margin-bottom: 12px;
+      }
+      &__subtitle {
+         text-align: center;
+         @include fl(14,22);
+         text-align: center;
+         color: $gray;
+      }
+      &__price {
+         @include fl(48, 72);
+         font-weight: 700;
+         text-align: center;
+         letter-spacing: -0.05em;
+         margin-bottom: 12px;
+      }
+      &__lvl { 
+         text-align: center;
+         margin-bottom: 12px;
+         span {
+            @include fl(13,21);
+            background: rgba(97, 95, 103, 0.1);
+            border-radius: 100px;
+            padding: 7px 16px;
+            color: $gray;
+            font-weight: 500;
+         }
+      }
+      &__text {
+         @include fl(14,22);
+         color: $gray;
+         text-align: center;
+         margin-bottom: 36px;
+      }
+      &__btn {
+         @extend %btn;
+         max-width: 220px;
+         width: 100%;
+         border-radius: 100px;
+         padding: 15px 0;
+         border: 1px solid $dark;
+         margin: 0 auto 36px;
+         @include fl(15,22);
+         font-weight: 700;
+         color: $light;
+         background-color: $dark;
+         &:hover {
+            color: $dark;
+            background-color: $light;
+            border: 1px solid $dark;
+         }
+      }
+      &__list {
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+         @include fl(14,21);
+      }
+      &__item {
+         position: relative;
+         padding: 1.5px 0 1.5px 36px;
+         &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0px;
+            width: 24px;
+            height: 24px;
+            background-image: url(../../img/icons/check.svg);
+         }
+      }
+   }
+   .pref {
+      background-color: $bg;
+      border-bottom-right-radius: 32px;
+      border-bottom-left-radius: 32px;
+      &__container {
+         @extend %container;
+         padding-top: 4px;
+         padding-bottom: 16px;
+         @media (min-width: 600px) {
+            padding-top: 0px;
+            padding-bottom: 20px;
+         }
+         @media (min-width: 993px) {
+            padding-top: 0px;
+            padding-bottom: 30px;
+         }
+         @media (min-width: 1250px) {
+            padding-top: 0px;
+            padding-bottom: 40px;
+         }
+      }
+      &__inner {
+         padding: 36px 16px;
+         border-radius: 32px;
+         background-color: #fff;
+         @media (min-width: 600px) {
+            padding: 36px;
+         }
+         @media (min-width: 769px) {
+            padding: 48px;
+         }
+         @media (min-width: 1600px) {
+            padding: 72px;
+         }
+      }
+      &__title {
+        @extend %sec-title;
+         margin-bottom: 16px;
+         text-align: center;
+         span {
+            display: block;
+         }
+      }
+      &__text {
+        @extend %sec-text;
+         text-align: center;
+         margin-bottom: 28px;
+         @media (min-width: 769px) {
+            max-width: 832px;
+            margin: 0 auto 40px;
+         }
+         @media (min-width:993px) {
+            margin-top: 60px;
+         }
+      }
+      &__list {
+         display: flex;
+         flex-direction: column;
+         gap: 24px;
+         width: 100%;
+         @media (min-width: 600px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+         }
+         @media (min-width: 993px) {
+            gap: 32px;
+         }
+      }
+      &__item {
+         border: 1px solid rgba(51, 51, 51, 0.1);
+         border-radius: 16px;
+         padding: 20px;
+         svg {
+            margin-bottom: 28px;
+         }
+         @media (min-width: 600px) {
+            flex: 1 0 48%;
+            padding: 24px;
+         }
+         @media (min-width: 1250px) {
+            flex:  1 0 31%;
+            padding: 32px;
+         }
+      }
+      &__item-title {
+         @include fl(18,29);
+         font-weight: 700;
+         margin-bottom: 8px;
+      }
+      &__item-text {
+         @include fl(14,22);
+         color: $gray;
+      }
+   }
+   .invest {
+      margin-top: 16px;
+      @media (min-width: 769px) {
+         margin-top: 20px;
+      }
+      @media (min-width: 1200px) {
+         margin-top: 30px;
+      }
+      @media (min-width: 1500px) {
+         margin-top: 40px;
+      }
+      &__container {
+         @extend %container;
+         background: #EBEEFB;
+         border-radius: 32px;
+         @media (min-width: 600px) {
+            background: unset;
+            border-radius: unset;
+         }
+      }
+      &__inner {
+         display: flex;
+         flex-direction: column;
+         gap: 28px;
+         padding: 36px 0;
+         @media (min-width: 600px) {
+            padding: 32px;
+            background: #EBEEFB;
+            border-radius: 32px;
+         }
+         @media (min-width: 769px) {
+            padding: 48px;
+            gap: 40px;
+         }
+         @media (min-width: 993px) {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+         }
+         @media (min-width: 1600px) {
+            padding: 72px;
+         }
+      }
+      &__pic {
+         border-radius: 24px;
+         transform: rotateY(180deg);
+         padding-bottom: percent(239,344);
+         img {
+            transform: scale(1.2);
+            object-position: -90%;
+         }
+         @media (min-width: 993px) {
+            max-width: 832px;
+            padding-bottom: percent(580, 1696);
+            img {
+               object-position: 0%;
+            }
+         }
+      }
+      &__content {
+         @media (min-width: 993px) {
+            max-width: 688px;
+            width: 100%;
+         }
+      }
+      &__title {
+         @extend %sec-title;
+         @include fl(38,44);
+         margin-bottom: 16px;
+         @media (min-width: 769px) {
+            margin-bottom: 20px;
+            @include fl(52,60);
+         }
+         @media (min-width: 1400px) {
+            @include fl(62,71);
+            span {
+               display: block;
+            }
+         }
+      }
+      &__text {
+         @extend %sec-text;
+         margin-bottom: 24px;
+         @media (min-width: 769px) {
+            margin-bottom: 32px;
+         }
+      }
+   }
+   .reviews {
+      margin-top: 20px;
+      background-color: $bg;
+      border-top-right-radius: 32px;
+      border-top-left-radius: 32px;
+      @media (min-width: 993px) {
+         margin-top: 40px;
+      }
+      &__container {
+         @extend %container;
+         padding-top: 16px;
+         padding-bottom: 16px;
+         @media (min-width: 600px) {
+            padding-top: 20px;
+            padding-bottom: 20px;
+         }
+         @media (min-width: 993px) {
+            padding-top: 30px;
+            padding-bottom: 30px;
+         }
+         @media (min-width: 1250px) {
+            padding-top: 40px;
+            padding-bottom: 40px;
+         }
+      }
+      &__inner {
+         padding: 36px 16px;
+         border-radius: 32px;
+         background-color: #fff;
+         @media (min-width: 600px) {
+            padding: 36px;
+         }
+         @media (min-width: 769px) {
+            padding: 48px;
+         }
+         @media (min-width: 1600px) {
+            padding: 72px;
+         }
+      }
+      &__title {
+        @extend %sec-title;
+        @include fl(30,36);
+         margin-bottom: 16px;
+         text-align: center;
+         span {
+            display: block;
          }
       }
    }
