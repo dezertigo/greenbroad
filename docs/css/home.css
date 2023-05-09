@@ -1410,7 +1410,7 @@ body.home .reviews__container {
 }
 
 body.home .reviews__inner {
-  padding: 36px 16px;
+  padding: 36px 24px;
   border-radius: 32px;
   background-color: #fff;
 }
@@ -1418,12 +1418,66 @@ body.home .reviews__inner {
 body.home .reviews__title {
   font-size: 1.875rem;
   line-height: 1.2;
-  margin-bottom: 16px;
+  margin-bottom: 28px;
   text-align: center;
 }
 
 body.home .reviews__title span {
   display: block;
+}
+
+body.home .reviews__blockquote {
+  margin: 0;
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.625;
+  max-width: 976px;
+  width: 100%;
+}
+
+body.home .reviews__pic {
+  max-width: 100px;
+  width: 100%;
+  border-radius: 100%;
+  padding-bottom: 100px;
+  margin: 0 auto 34px;
+}
+
+body.home .reviews__name {
+  margin-bottom: 4px;
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+body.home .reviews__desc {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #615F67;
+}
+
+.slider__slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mainSlider .slider__slide {
+  gap: 28px;
+  padding: 32px 0;
+}
+
+.secondSlider .swiper-slide {
+  opacity: 0.2;
+}
+
+.secondSlider .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.secondSlider .slider__slide {
+  padding-top: 28px;
+  text-align: center;
 }
 
 @media (min-width: 470px) {
@@ -1627,6 +1681,21 @@ body.home .reviews__title span {
   body.home .get__item:nth-child(5) {
     transform: translateY(0px);
   }
+
+  .secondSlider .swiper-slide .reviews__name,
+  .secondSlider .swiper-slide .reviews__desc {
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+
+  .secondSlider .swiper-slide-thumb-active .reviews__pic {
+    transform: translateY(10px) scale(1.2);
+  }
+
+  .secondSlider .swiper-slide-thumb-active .reviews__name,
+  .secondSlider .swiper-slide-thumb-active .reviews__desc {
+    opacity: 1;
+  }
 }
 
 @media (min-width: 769px) {
@@ -1824,6 +1893,21 @@ body.home .reviews__title span {
 
   body.home .reviews__inner {
     padding: 48px;
+  }
+
+  body.home .reviews__blockquote {
+    font-size: 1.125rem;
+    line-height: 1.4444444444;
+  }
+
+  .mainSlider .slider__slide {
+    flex-direction: row;
+    gap: 40px;
+    padding: 40px 0;
+  }
+
+  .mainSlider .slider__slide :nth-child(1) {
+    flex-shrink: 0;
   }
 }
 
@@ -2024,6 +2108,13 @@ body.home .reviews__title span {
   body.home .reviews__container {
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .mainSlider .slider__slide {
+    padding: 60px 0;
+    gap: 80px;
   }
 }
 

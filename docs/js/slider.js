@@ -9,5 +9,6 @@ class Slider {
    }
 }
 
-// const slider = new Slider(".slider");
-// slider.setWidth(300);
+// const slider = new Slider("slider");
+// slider.setWidth(1120);
+
