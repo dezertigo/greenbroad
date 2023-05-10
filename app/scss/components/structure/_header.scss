@@ -39,7 +39,7 @@
       img {
          max-width: 168px;
          @media (min-width:600px) {
-            max-width: unset;
+            max-width: 200px;
          }
       }
       &:hover {

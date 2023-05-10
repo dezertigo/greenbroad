@@ -1088,11 +1088,11 @@ body.home {
          }
       }
       &__arrow-prev {
-         background-image: url(../../img/icons/arrow-left-short.svg);
+         background-image: url(@img/icons/arrow-left-short.svg);
          left: 0;
       }
       &__arrow-next {
-         background-image: url(../../img/icons/arrow-right-short.svg);
+         background-image: url(@img/icons/arrow-right-short.svg);
          right: 0;
       }
    }

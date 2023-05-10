@@ -1534,12 +1534,12 @@ body.home .slider__slide {
 }
 
 body.home .slider__arrow-prev {
-  background-image: url(../../img/icons/arrow-left-short.svg);
+  background-image: url(@img/icons/arrow-left-short.svg);
   left: 0;
 }
 
 body.home .slider__arrow-next {
-  background-image: url(../../img/icons/arrow-right-short.svg);
+  background-image: url(@img/icons/arrow-right-short.svg);
   right: 0;
 }
 
@@ -1707,7 +1707,7 @@ body.home .process__btn {
   }
 
   .header__logo img {
-    max-width: unset;
+    max-width: 200px;
   }
 
   .header__btn {

@@ -863,7 +863,7 @@ body.test .hero__container {
   }
 
   .header__logo img {
-    max-width: unset;
+    max-width: 200px;
   }
 
   .header__btn {
