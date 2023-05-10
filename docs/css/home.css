@@ -1167,11 +1167,7 @@ body.home .get__item {
 }
 
 body.home .get__item img {
-  transition: all 0.5s ease;
-}
-
-body.home .get__item img:hover {
-  transform: scale(1.1);
+  min-width: 158px;
 }
 
 body.home .get__item:nth-child(even) {

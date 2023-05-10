@@ -9,7 +9,7 @@
 //    if (newEl) return newEl;
 // }
 
-// import {} from "./lazy.js";
+import {} from "./lazy.js";
 import {} from "./menu.js";
 // import {} from "./spoiler.js";
 import {} from "./accordion.js";
