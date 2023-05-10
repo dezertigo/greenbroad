@@ -19,6 +19,9 @@
          border-radius: unset;
          margin-bottom: 20px;
       }
+      @media (min-width: 993px) {
+         margin-bottom: 50px;
+      }
    }
    &__inner {
       padding: 36px 0px;
